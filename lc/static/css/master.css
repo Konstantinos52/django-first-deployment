@@ -1,0 +1,70 @@
+body {
+font-family: Comic Sans MS;
+color: #FFFFFF;}
+
+.navbar
+{background-color: #191970;
+ border-color: #FFFFFF;
+ border-style: solid;
+ border-width: 5px;
+}
+
+#nom {padding-top: 10px; padding-bottom: 0; padding-right: 10px;}
+
+.btn  {
+color: #FFFFFF;
+border: 2px solid #FFFFFF;}
+
+.btn:hover  {
+color: #FFFFFF;
+border: 2px solid #FFFFFF;}
+
+#basique .row
+{background-color: #191970;
+ border-color: #FFFFFF;
+ border-style: solid;
+ border-width: 5px;
+}
+
+#logon
+{color: #FFFFFF;
+ padding-top: 40px;
+ padding-bottom: 160px;
+
+}
+
+#bonjour
+{
+ font-size: 35px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>La connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    </head>
+<body>
+
+<nav class="navbar navbar-expand-sm">
+    <ul class="navbar-nav">
+        <li class="nav-item" id="nom">La connexion</li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a href="{% url 'post:post_list' %}" class="btn btn-default" role="button">Κοινοποιήσεις</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'post:create' %}" class="btn btn-default" role="button">Δημιουργία κοινοποίησης</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'accounts:logout' %}" class="btn btn-danger" role="button">Αποσύνδεση</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a href="{% url 'accounts:login' %}" class="btn btn-default" role="button">Σύνδεση</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="container-fluid" id="basique">
+    <div class="row">
+        <div class="col-sm-8">
+            {% block content1 %} {% endblock %}
+        </div>
+        <div class="col-sm-4">
+            {% block content2 %} {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

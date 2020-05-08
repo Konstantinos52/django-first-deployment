@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<h1>Κοινοποιήσεις</h1>
+<ul>
+    {%for post in all%}
+    <li><a href="{% url 'post:post_detail' post.id %}">{{post.title}} - {{post.user}}</a></li>
+    {% endfor %}
+</ul>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

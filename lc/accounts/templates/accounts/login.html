@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+{% block content1 %}
+<div class="container">
+    <h1>Ενεργοποίηση λογαριασμού</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}<br>
+        <input type="submit" class="btn btn-primary" value="Ενεργοποίηση λογαριασμού">
+        <br><br><br><br>
+    </form>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

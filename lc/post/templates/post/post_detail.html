@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<h1>{{post.message}}</h1><br>
+Σχόλια
+<ul>
+    {%for p in post.comments.all %}
+    <li>{{p.text}} - {{p.author}}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'post:update' post.id %}" class="btn btn-default" role="button">Τροποποίηση κοινοποίησης</a>
+<a href="{% url 'post:delete' post.id%}" class="btn btn-default" role="button">Διαγραφή κοινοποίησης</a>
+<a href="{% url 'post:comment' post.id%}" class="btn btn-default" role="button">Σχολιασμός κοινοποίησης</a>
+
+
+
+
+
+{% endblock %}
